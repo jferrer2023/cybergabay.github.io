@@ -84,14 +84,14 @@ body {
 }
 
 .icon {
-  width: 4rem;
+  width: 4rem;             /* green square size */
   height: 4rem;
   margin-bottom: 1.5rem;
   border-radius: 0.75rem;
   display: flex;
-  align-items: center;     /* centers vertically */
-  justify-content: center; /* centers horizontally */
-  background: linear-gradient(135deg, #22c55e, #16a34a); /* green gradient */
+  align-items: center;     /* center vertically */
+  justify-content: center; /* center horizontally */
+  background: #22c55e;     /* solid green OR use gradient */
   transition: transform 0.3s ease;
 }
 
@@ -106,9 +106,10 @@ body {
 }
 
 .icon img {
-  width: 2rem;   /* scale down the image */
-  height: 2rem;
-  object-fit: contain;
+  max-width: 60%;          /* scale image down to fit */
+  max-height: 60%;
+  object-fit: contain;     /* keep proportions */
+  display: block;
 }
 
 /* Title + Text */
