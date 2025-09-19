@@ -1,3 +1,8 @@
+/* Reset default body margin */
+body {
+  margin: 0;
+}
+
 /* Make header (title bar + nav) fixed */
 .fixed-header {
   position: fixed;
@@ -103,5 +108,51 @@ p {
   text-align: center;  /* center paragraph text */
 }
 
+/* footer*/
+/* Footer */
+.footer {
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 10px 20px;   /* thin footer */
+  width: 100%;          /* full width */
+  box-sizing: border-box;
+}
 
+.footer-container {
+  max-width: 1200px;    /* optional: keeps content centered */
+  margin: 0 auto;       /* center the container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #a0efa7;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #a0efa7;
+}
+
+.copyright {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
