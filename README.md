@@ -1,1 +1,1 @@
-# https://jferrer2023.github.io/cybergabay.github.io/
+# https://cybergabay.github.io/
