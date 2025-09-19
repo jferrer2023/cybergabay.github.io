@@ -1,0 +1,16 @@
+/* Make entire body green */
+body {
+  background-color: #21d596;  /* green */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Optional: keep main content styled but remove background */
+main {
+  padding: 30px;
+  max-width: 900px;
+  margin: 100px auto;   /* spacing below header */
+  color: white;         /* make text readable */
+  text-align: center;
+}
