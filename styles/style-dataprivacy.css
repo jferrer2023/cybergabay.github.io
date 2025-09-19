@@ -89,9 +89,9 @@ body {
   margin-bottom: 1.5rem;
   border-radius: 0.75rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #57ccc1, #39844a);
+  align-items: center;     /* centers vertically */
+  justify-content: center; /* centers horizontally */
+  background: linear-gradient(135deg, #22c55e, #16a34a); /* green gradient */
   transition: transform 0.3s ease;
 }
 
@@ -103,6 +103,12 @@ body {
   width: 2rem;
   height: 2rem;
   color: white;
+}
+
+.icon img {
+  width: 2rem;   /* scale down the image */
+  height: 2rem;
+  object-fit: contain;
 }
 
 /* Title + Text */
