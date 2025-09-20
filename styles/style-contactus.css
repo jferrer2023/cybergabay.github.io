@@ -1,0 +1,73 @@
+body {
+  font-family: 'Courier New', monospace;
+  background: #f5f3f3;
+  color: #00ff41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.terminal {
+  width: 600px;
+  background: #ffffff;
+  border: 2px solid #00ff41;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  overflow: hidden;
+}
+
+.terminal-header {
+  background: #111;
+  padding: 8px 12px;
+  border-bottom: 1px solid #00ff41;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.red { background: #ff5f5f; }
+.yellow { background: #ffff5f; }
+.green { background: #5fff5f; }
+
+.title {
+  margin-left: auto;
+  color: #00ff41;
+  font-size: 0.8rem;
+}
+
+.terminal-body {
+  padding: 20px;
+}
+
+.line {
+  margin: 0 0 8px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff41;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards, blink 0.7s step-end infinite;
+}
+
+.line:nth-child(1) { animation-delay: 0s, 0s; }
+.line:nth-child(2) { animation-delay: 3s, 3s; }
+.line:nth-child(3) { animation-delay: 6s, 6s; }
+.line:nth-child(4) { animation-delay: 9s, 9s; }
+.line:nth-child(5) { animation-delay: 12s, 12s; }
+.line:nth-child(6) { animation-delay: 15s, 15s; }
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}

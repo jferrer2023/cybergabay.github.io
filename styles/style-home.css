@@ -1,0 +1,168 @@
+/* Reset default body margin */
+body {
+  margin: 0;
+}
+
+/* Make header (title bar + nav) fixed */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Title bar */
+.title-bar {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 8px 12px;
+}
+
+.title-bar .logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title-bar .site-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+
+/* Title bar font style */
+.title-bar .site-title {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; /* change font family */
+  font-size: 1.4rem;   /* adjust size */
+  font-weight: normal;   /* bold, normal, lighter */
+  letter-spacing: 1px; /* optional spacing */
+}
+
+
+/* Navbar */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  flex: 1; /* each item takes equal space */
+}
+
+/* Navbar links and Font Style*/
+.navbar li a {
+  display: flex;               
+  align-items: center;         /* vertical center */
+  justify-content: center;     /* horizontal center */
+  width: 100%;                 
+  height: 50px;                /* fixed height for navbar */
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+  font-family: "Trebuchet MS", Helvetica, sans-serif; 
+  font-size: 0.9rem;           /* smaller font size */
+  font-weight: 500;            
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Active link */
+.navbar li a.active {
+  color: #a2e4a4; /* make Cyber Alerts text yellow */
+  background-color: #1a1a1a; /* optional: highlight background */
+  font-weight: bold;      /* optional: make text stand out */
+}
+
+.navbar li a:hover {
+  background-color: #45a049;
+}
+
+/* Style for h2 headings */
+h2 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif; /* choose your font */
+  font-size: 1.8rem;    /* adjust size (1.8rem ≈ 28px) */
+  font-weight: bold;    /* bold, normal, lighter */
+  color: #45a049;       /* change text color #45a049*/
+  margin-bottom: 10px;  /* space under heading */
+  text-align: center;   /* center text */
+}
+
+/* Style for p paragraphs */
+p {
+  font-family: "Arial", sans-serif; /* choose font */
+  font-size: 1rem;     /* 1rem ≈ 16px */
+  line-height: 1.6;    /* spacing between lines */
+  color: #333;         /* text color */
+  margin: 0 auto;      /* center horizontally if limited width */
+  max-width: 800px;    /* optional: limit width for readability */
+  text-align: center;  /* center paragraph text */
+}
+
+
+
+
+
+
+
+
+
+
+/* footer*/
+
+.footer {
+  background: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 10px 20px;   /* thin footer */
+  width: 100%;          /* full width */
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1200px;    /* optional: keeps content centered */
+  margin: 0 auto;       /* center the container */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+
+.social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 14px;
+  transition: color 0.3s;
+    text-decoration: none; /* removes underline */
+  color: white; /* or whatever color you want */
+}
+
+
+.copyright {
+  font-size: 12px;
+  color: #aaa;
+  margin: 0;
+}
+
+
+.footer a:hover {
+  color: #67c8b1; /* optional hover effect */
+}
