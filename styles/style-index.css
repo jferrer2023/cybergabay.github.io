@@ -1,62 +1,71 @@
-
-
-/* Make video cover entire screen */
+/* ===================================================
+   BACKGROUND VIDEO
+   =================================================== */
 #bg-video {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;       /* force full width */
-  height: 100%;      /* force full height */
-  z-index: -1;       /* behind content */
-  object-fit: fill;  /* stretch instead of crop */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Center the content over the video */
+/* ===================================================
+   BODY
+   =================================================== */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background-color: #000;
+  font-family: 'Orbitron', sans-serif; /* ✅ Cyber-sec style */
 }
 
-.welcome-container {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.5); /* overlay for readability */
-  padding: 40px;
-  border-radius: 15px;
-  color: white;
-}
-
-/* Start button styling */
-.start-button {
-  display: inline-block;
-  margin-top: 20px;
-  background: #0a190a;
-  color: white;
-  padding: 15px 30px;
-  font-size: 15px;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.start-button:hover {
-  background: #45a049;
-}
-
-/* Bottom center logo */
-.bottom-logo {
-  position: fixed;
-  top: 30%;            /* 50% from the top of the viewport */
-  left: 50%;           /* center horizontally */
-  transform: translate(-50%, -50%); /* adjust center both horizontally & vertically */
-  width: 80px;
-  height: 80px;
+/* ===================================================
+   TOP CENTER LOGO
+   =================================================== */
+.top-logo {
+  position: absolute;
+  top: 140px;          /* 🔧 Adjust vertical position here (increase to move lower) */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;       /* 🔧 Adjust logo size here */
+  height: 150px;      /* 🔧 Keep proportional to width */
   border-radius: 50%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 2;
 }
 
+/* ===================================================
+   WELCOME CONTAINER
+   =================================================== */
+.welcome-container {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  max-width: 600px;
+}
 
+/* ===================================================
+   TEXT STYLES
+   =================================================== */
+.welcome-title {
+  font-size: 3rem;    /* 🔧 Adjust title size here */
+  color: #21d596;
+}
+
+.welcome-subtitle {
+  font-size: 1.2rem;  /* 🔧 Adjust subtitle size here */
+  color: #f5f5f5;
+}
+
+/* ===================================================
+   BUTTON STYLES
+   =================================================== */
+.btn-success {
+  background-color: #0a190a;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #45a049;
+}
