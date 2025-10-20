@@ -11,54 +11,29 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-   <!-- Google Font: Orbitron -->
+  <!-- Google Font: Orbitron -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../styles/style-home.css">
 </head>
 
 <body>
-  <!-- Fixed Header -->
-  <header class="fixed-top">
-    <div class="title-bar d-flex align-items-center px-3 py-2">
-      <img src="../images/image1.png" alt="CyberGabay Logo" class="logo me-2">
-      <h1 class="site-title mb-0">CyberGabay</h1>
-    </div>
+  <!-- ===================================================
+       HEADER (LOADED DYNAMICALLY)
+       =================================================== -->
+  <div id="header"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-0">
-      <div class="container-fluid px-0 mx-0">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#cyberNavbar" aria-controls="cyberNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="cyberNavbar">
-          <ul class="navbar-nav w-100 d-flex text-center no-margin">
-            <li class="nav-item flex-fill"><a href="home.html" class="nav-link active">Home</a></li>
-            <li class="nav-item flex-fill"><a href="cyberalerts.html" class="nav-link">Cyber Alerts</a></li>
-            <li class="nav-item flex-fill"><a href="dataprotection.html" class="nav-link">Data Protection</a></li>
-            <li class="nav-item flex-fill"><a href="dataprivacy.html" class="nav-link">Data Privacy</a></li>
-            <li class="nav-item flex-fill"><a href="resources.html" class="nav-link">Resources</a></li>
-            <li class="nav-item flex-fill"><a href="threatsimulator.html" class="nav-link">Threat Simulator</a></li>
-            <li class="nav-item flex-fill"><a href="challenges.html" class="nav-link">Challenges</a></li>
-            <li class="nav-item flex-fill"><a href="reportanincident.html" class="nav-link">Report an Incident</a></li>
-            <li class="nav-item flex-fill"><a href="contactus.html" class="nav-link">Contact Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main Content -->
+  <!-- ===================================================
+       MAIN CONTENT
+       =================================================== -->
   <main class="content text-center mt-5 pt-5">
     <div class="container mt-5 pt-5">
       <h2>Welcome to CyberGabay</h2>
       <p>
         Your trusted guide to building a smarter and safer digital life.
         <br>
-        We are network and cybersecurity students dedicated to spreading awareness about online safety. 
+        We are network and cybersecurity students dedicated to spreading awareness about online safety.
         This website was created for educational purposes — to help you understand digital threats, learn best practices, and explore tools that make the internet a safer place for everyone.
       </p>
 
@@ -66,27 +41,36 @@
     </div>
   </main>
 
-  <!-- Footer -->
-<footer class="footer mt-5">
-  <div class="footer-container container">
-    <div class="footer-left">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
+  <!-- ===================================================
+       FOOTER (LOADED DYNAMICALLY)
+       =================================================== -->
+  <div id="footer"></div>
 
-    <div class="footer-center">
-      <a href="https://facebook.com/CyberGabay" target="_blank"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-
-    <div class="footer-right">
-      <p>&copy; 2025 CyberGabay. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-  <!-- Bootstrap JS -->
+  <!-- ===================================================
+       BOOTSTRAP & JS IMPORTS
+       =================================================== -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ===================================================
+       DYNAMIC HEADER & FOOTER LOADER
+       =================================================== -->
+<script>
+  // Load header and footer dynamically
+  Promise.all([
+    fetch("header.html").then(res => res.text()),
+    fetch("footer.html").then(res => res.text())
+  ]).then(([headerData, footerData]) => {
+    document.getElementById("header").innerHTML = headerData;
+    document.getElementById("footer").innerHTML = footerData;
+
+    // ✅ Highlight the active page link automatically
+    const currentPage = window.location.pathname.split("/").pop();
+    document.querySelectorAll(".nav-link").forEach(link => {
+      if (link.getAttribute("href") === currentPage) {
+        link.classList.add("active");
+      }
+    });
+  });
+</script>
 </body>
 </html>
