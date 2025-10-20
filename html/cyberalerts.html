@@ -1,144 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CyberGabay - Cyber Alerts</title>
-  <link rel="stylesheet" href="../styles/style-home.css">
-  <link rel="stylesheet" href="../styles/style-cyberalerts.css">
-  <script src="https://unpkg.com/lucide@latest"></script>
+	<meta charset="UTF-8">
+	<title>CyberGabay - Cyber Alerts</title>
+
+	<!-- Bootstrap CSS -->
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+	>
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../styles/style-home.css">
+	<link rel="stylesheet" href="../styles/style-cyberalerts.css">
+
+	<!-- Lucide Icons -->
+	<script src="https://unpkg.com/lucide@latest"></script>
+
+	<!-- Font Awesome -->
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+	>
 </head>
 <body>
-  <!-- Fixed Header (title bar + navbar) -->
-  <header class="fixed-header">
-    <div class="title-bar">
-      <img src="../images/image1.png" alt="CyberGabay Logo" class="logo">
-      <h1 class="site-title">CyberGabay</h1>
-    </div>
+	<!-- Fixed Header -->
+	<header class="fixed-header">
+		<div class="title-bar d-flex align-items-center">
+			<img src="../images/image1.png" alt="CyberGabay Logo" class="logo me-2">
+			<h1 class="site-title mb-0">CyberGabay</h1>
+		</div>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cyberalerts.html" class="active">Cyber Alerts</a></li>
-        <li><a href="dataprotection.html">Data Protection</a></li>
-        <li><a href="dataprivacy.html">Data Privacy</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="threatsimulator.html">Threat Simulator</a></li>
-        <li><a href="challenges.html">Challenges</a></li>
-        <li><a href="reportanincident.html">Report an Incident</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<ul class="navbar-nav w-100 d-flex justify-content-around">
+					<li class="nav-item"><a href="home.html" class="nav-link">Home</a></li>
+					<li class="nav-item"><a href="cyberalerts.html" class="nav-link active">Cyber Alerts</a></li>
+					<li class="nav-item"><a href="dataprotection.html" class="nav-link">Data Protection</a></li>
+					<li class="nav-item"><a href="dataprivacy.html" class="nav-link">Data Privacy</a></li>
+					<li class="nav-item"><a href="resources.html" class="nav-link">Resources</a></li>
+					<li class="nav-item"><a href="threatsimulator.html" class="nav-link">Threat Simulator</a></li>
+					<li class="nav-item"><a href="challenges.html" class="nav-link">Challenges</a></li>
+					<li class="nav-item"><a href="reportanincident.html" class="nav-link">Report an Incident</a></li>
+					<li class="nav-item"><a href="contactus.html" class="nav-link">Contact Us</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
 
-<!-- Main Content -->
-<main class="content">
+	<!-- Main Content -->
+	<main class="content container my-5 pt-5">
+		<section class="text-center mb-5">
+			<h2>CYBER ALERTS</h2>
+			<p>Stay Alert. Stay Secure. Stay Ahead.</p>
+		</section>
 
-  <!-- Welcome Section -->
-  <section class="welcome-section">
-    <h2>CYBER ALERTS</h2>
-    <p>
-    Stay Alert. Stay Secure. Stay Ahead.
-    </p>
-  </section>
+		<!-- Hero Banner -->
+		<section class="hero-banner mb-5">
+			<div class="hero-image position-relative">
+				<img src="https://images.unsplash.com/photo-1544890225-2f3faec4cd60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+				     alt="Cybersecurity concept" class="img-fluid w-100 rounded">
+				<div class="overlay d-flex flex-column justify-content-center align-items-center text-center">
+					<h2>Digital Security Matters</h2>
+					<p>Your online safety is in your hands</p>
+				</div>
+			</div>
+		</section>
 
-  <!-- Hero Banner Section -->
-  <section class="hero-banner">
-    <div class="hero-image">
-      <img src="https://images.unsplash.com/photo-1544890225-2f3faec4cd60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" 
-           alt="Cybersecurity and online safety concept">
-      <div class="overlay">
-        <h2>Digital Security Matters</h2>
-        <p>Your online safety is in your hands</p>
-      </div>
-    </div>
-  </section>
+		<!-- Latest Cyber Alerts -->
+		<section class="cyber-alerts text-center mb-5">
+			<h3>⚠ Latest Cyber Alerts</h3>
+			<div class="row g-4 mt-3">
+				<div class="col-md-4">
+					<div class="card h-100 border-0 shadow-sm">
+						<img src="https://images.unsplash.com/photo-1739903215568-8f05d85489ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+						     class="card-img-top alert-img" alt="Phishing Alert">
+						<div class="card-body text-start">
+							<h5 class="card-title">Phishing Scam Warning</h5>
+							<p class="card-text">Beware of fake bank emails asking for login credentials. Do not click unknown links.</p>
+							<a href="https://www.staysafeonline.org/articles/phishing" target="_blank" class="btn btn-outline-success btn-sm">Learn More →</a>
+						</div>
+					</div>
+				</div>
 
-  <!-- Cyber Alert Tabs Section -->
-  <section class="cyber-alerts">
-    <h3>⚠ Latest Cyber Alerts</h3>
-    <div class="alert-grid">
-      <div class="tab">
-        <img src="https://images.unsplash.com/photo-1739903215568-8f05d85489ab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Phishing Alert">
-        <h4>Phishing Scam Warning</h4>
-        <p>Beware of fake bank emails asking for login credentials. Do not click unknown links.</p>
-        <a href="https://www.staysafeonline.org/articles/phishing">Learn More →</a>
-      </div>
+				<div class="col-md-4">
+					<div class="card h-100 border-0 shadow-sm">
+						<img src="https://images.unsplash.com/photo-1597958168639-3b82b8661e83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+						     class="card-img-top alert-img" alt="Malware Alert">
+						<div class="card-body text-start">
+							<h5 class="card-title">New Malware Detected</h5>
+							<p class="card-text">A ransomware variant is spreading via malicious attachments. Keep your antivirus updated.</p>
+							<a href="https://www.staysafeonline.org/articles/how-to-prevent-and-recover-from-ransomware" target="_blank" class="btn btn-outline-success btn-sm">Read Guide →</a>
+						</div>
+					</div>
+				</div>
 
-      <div class="tab">
-        <img src="https://images.unsplash.com/photo-1597958168639-3b82b8661e83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Malware Alert">
-        <h4>New Malware Detected</h4>
-        <p>A ransomware variant is spreading via malicious attachments. Keep your antivirus updated.</p>
-        <a href="https://www.staysafeonline.org/articles/how-to-prevent-and-recover-from-ransomware">Read Guide →</a>
-      </div>
+				<div class="col-md-4">
+					<div class="card h-100 border-0 shadow-sm">
+						<img src="https://images.unsplash.com/photo-1710770563074-6d9cc0d3e338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400"
+						     class="card-img-top alert-img" alt="Social Engineering">
+						<div class="card-body text-start">
+							<h5 class="card-title">Social Engineering Threat</h5>
+							<p class="card-text">Hackers may impersonate IT staff to steal personal info. Always verify before sharing details.</p>
+							<a href="https://lifelock.norton.com/learn/internet-security/social-engineering" target="_blank" class="btn btn-outline-success btn-sm">See Examples →</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-      <div class="tab">
-        <img src="https://images.unsplash.com/photo-1710770563074-6d9cc0d3e338?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400" alt="Social Engineering">
-        <h4>Social Engineering Threat</h4>
-        <p>Hackers may impersonate IT staff to steal personal info. Always verify before sharing details.</p>
-        <a href="https://lifelock.norton.com/learn/internet-security/social-engineering">See Examples →</a>
-      </div>
-    </div>
-  </section>
+		<!-- Safety Tips -->
+		<section class="safety-tips-grid text-center mb-5">
+			<h3>💡 Essential Safety Tips</h3>
+			<div class="row g-4 mt-3">
+				<div class="col-md-4">
+					<div class="tip-card h-100 p-4 rounded shadow-sm">
+						<i data-lucide="lock"></i>
+						<h4>Strong Passwords</h4>
+						<p>Use unique, complex passwords for each account and enable two-factor authentication whenever possible.</p>
+					</div>
+				</div>
 
-  <!-- Extra Safety Tips Grid -->
-  <section class="safety-tips-grid">
-    <h3>💡 Essential Safety Tips</h3>
-    <div class="tips-grid">
-      <div class="tip-card">
-        <i data-lucide="lock"></i>
-        <h4>Strong Passwords</h4>
-        <p>Use unique, complex passwords for each account and enable two-factor authentication whenever possible.</p>
-      </div>
+				<div class="col-md-4">
+					<div class="tip-card h-100 p-4 rounded shadow-sm">
+						<i data-lucide="eye"></i>
+						<h4>Privacy Settings</h4>
+						<p>Regularly review and update privacy settings on social media platforms and online services.</p>
+					</div>
+				</div>
 
-      <div class="tip-card">
-        <i data-lucide="eye"></i>
-        <h4>Privacy Settings</h4>
-        <p>Regularly review and update privacy settings on social media platforms and online services.</p>
-      </div>
+				<div class="col-md-4">
+					<div class="tip-card h-100 p-4 rounded shadow-sm">
+						<i data-lucide="alert-triangle"></i>
+						<h4>Phishing Awareness</h4>
+						<p>Be cautious of suspicious emails, links, and attachments. Verify sender authenticity before clicking.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-      <div class="tip-card">
-        <i data-lucide="alert-triangle"></i>
-        <h4>Phishing Awareness</h4>
-        <p>Be cautious of suspicious emails, links, and attachments. Verify sender authenticity before clicking.</p>
-      </div>
-    </div>
-  </section>
+		<!-- Closing Banner -->
+		<section class="banner text-center">
+			<h3>Stay Protected</h3>
+			<p>Your safety online is our priority. Stay updated with CyberGabay alerts.</p>
+			<a href="https://www.cisco.com/site/us/en/learn/topics/security/what-is-cybersecurity.html"
+			   class="btn btn-success mt-2">Learn More About Cybersecurity</a>
+		</section>
+	</main>
 
-  <!-- Closing Banner Call to Action -->
-  <section class="banner">
-      <h3>Stay Protected</h3>
-      <p>Your safety online is our priority. Stay updated with CyberGabay alerts.</p>
-      <a href="https://www.cisco.com/site/us/en/learn/topics/security/what-is-cybersecurity.html" class="cta-btn">Learn More About Cybersecurity</a>
-  </section>
-</main>
-<script>
-  lucide.createIcons();
+	<!-- Footer -->
+	<footer class="footer mt-5">
+		<div class="footer-container d-flex flex-wrap justify-content-between align-items-center py-3 px-4">
+			<div class="footer-links">
+				<a href="privacy.html">Privacy</a>
+				<a href="terms.html">Terms</a>
+			</div>
 
+			<div class="social-icons">
+				<a href="https://facebook.com/CyberGabay" target="_blank"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+				<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+			</div>
 
-  
-</script>
+			<p class="copyright mb-0">&copy; 2025 CyberGabay</p>
+		</div>
+	</footer>
 
-<!-- footer -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-
-    <div class="social-icons">
-      <a href="https://facebook.com/CyberGabay" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-
-    <p class="copyright">&copy; 2025 CyberGabay</p>
-  </div>
-</footer>
-
+	<!-- Bootstrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script>lucide.createIcons();</script>
 </body>
 </html>
