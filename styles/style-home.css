@@ -1,120 +1,133 @@
-  body {
-    margin: 0;
-    padding: 0;
-  }
+/* ===================================================
+   GLOBAL STYLES
+   =================================================== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
 
-  /* Title bar */
-  .title-bar {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 8px 16px;  /* controls height and spacing inside */
-  }
+/* ===================================================
+   TITLE BAR (Top Section with Logo + Site Title)
+   =================================================== */
+.title-bar {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 8px 16px;
+}
 
-  .title-bar .logo {
-    height: 35px; /* controls logo size */
-  }
+.title-bar .logo {
+  height: 35px;
+}
 
-  .title-bar .site-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.3rem; /* controls text size */
-    font-weight: normal;
-    letter-spacing: 1px;
-  }
+.title-bar .site-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
 
-  /* Navbar */
-  .navbar {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+/* ===================================================
+   NAVBAR (Main Navigation)
+   =================================================== */
+.navbar {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-  .navbar-nav {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+.navbar-nav {
+  margin: 0 !important;
+  padding: 0 !important;
+}
 
-  .nav-item {
-    flex: 1 1 auto;
-  }
+.nav-item {
+  flex: 1 1 auto;
+}
 
-  .navbar-nav .nav-link {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 0.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: white !important;
-    transition: background-color 0.3s ease;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 !important;
-    border-right: 1px solid #222;
-  }
+/* Navigation Links */
+.navbar-nav .nav-link {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white !important;
+  transition: background-color 0.3s ease;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 !important;
+  border-right: 1px solid #222;
+}
 
-  /* Remove right border on last item */
-  .navbar-nav .nav-item:last-child .nav-link {
-    border-right: none;
-  }
+/* Remove right border on last item */
+.navbar-nav .nav-item:last-child .nav-link {
+  border-right: none;
+}
 
-  .navbar-nav .nav-link.active {
-    background-color: #1a1a1a;
-    color: #a2e4a4 !important;
-    font-weight: bold;
-  }
+/* ===================================================
+   ✅ ACTIVE NAVLINK (CURRENT PAGE HIGHLIGHT)
+   =================================================== */
+.navbar-nav .nav-link.active {
+  background-color: #1a1a1a;
+  color: #a2e4a4 !important; /* ✅ Green highlight for active page */
+  font-weight: bold;
+}
 
-  .navbar-nav .nav-link:hover {
-    background-color: #45a049;
-  }
+/* Hover Effect */
+.navbar-nav .nav-link:hover {
+  background-color: #45a049;
+}
 
-  /* Headings and paragraphs */
-  h2 {
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #45a049;
-    margin-bottom: 10px;
-  }
+/* ===================================================
+   TEXT CONTENT (Headings & Paragraphs)
+   =================================================== */
+h2 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #45a049;
+  margin-bottom: 10px;
+}
 
-  p {
-    font-family: "Arial", sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+p {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  /* Footer */
+/* ===================================================
+   FOOTER (Bottom Section)
+   =================================================== */
 .footer {
   background: #111;
   color: #fff;
   font-family: Arial, sans-serif;
   width: 100%;
   box-sizing: border-box;
-
-  /* 🔽 Adjust this padding to control footer height */
   padding: 3px 12px;
-
   position: relative;
 }
 
-/* Footer container */
+/* Footer container layout */
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end; /* keeps content aligned low */
+  align-items: flex-end;
   flex-wrap: wrap;
-
-  /* 🔽 Optional fine-tuning of visible height */
   min-height: 25px;
-
   position: relative;
-  text-align: justify; /* text is neatly spaced */
+  text-align: justify;
   width: 100%;
 }
 
-/* Left section (Privacy & Terms) */
+/* ===================================================
+   FOOTER LEFT (Privacy & Terms Links)
+   =================================================== */
 .footer-left a {
   color: #fff;
   margin-right: 10px;
@@ -127,7 +140,9 @@
   color: #67c8b1;
 }
 
-/* Center section (Social Icons) */
+/* ===================================================
+   FOOTER CENTER (Social Media Icons)
+   =================================================== */
 .footer-center {
   text-align: center;
   flex: 1;
@@ -145,7 +160,9 @@
   color: #67c8b1;
 }
 
-/* Right section (Copyright) */
+/* ===================================================
+   FOOTER RIGHT (Copyright)
+   =================================================== */
 .footer-right {
   position: absolute;
   bottom: 4px;

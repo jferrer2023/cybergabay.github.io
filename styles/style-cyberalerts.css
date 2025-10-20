@@ -1,162 +1,121 @@
-/* General Body and Main Container */
+/* ===================================================
+   GENERAL BODY & LAYOUT
+   =================================================== */
 body {
-	background: #fff;
-	font-family: Arial, sans-serif;
-	color: #000;
-	margin: 0;
-	padding: 0;
+  background: #fff;
+  font-family: Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
+/* ===================================================
+   MAIN CONTENT SPACING (lower heading under navbar)
+   =================================================== */
+.content {
+  margin-top: 140px; /* ⬅ adjust this value as needed */
+}
 
-
-/* Hero Banner */
+/* ===================================================
+   HERO BANNER
+   =================================================== */
 .hero-banner .hero-image {
-	position: relative;
-	border-radius: 12px;
-	overflow: hidden;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .hero-banner .hero-image img {
-	width: 100%;
-	height: 380px;
-	object-fit: cover;
-	border-radius: 12px;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 .hero-banner .overlay {
-	position: absolute;
-	inset: 0;
-	background: rgba(0, 0, 0, 0.5);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	color: #21d596;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #21d596;
 }
 
 .hero-banner .overlay h2 {
-	font-size: 2rem;
-	color: #21d596;
+  font-size: 2rem;
+  color: #21d596;
 }
 
 .hero-banner .overlay p {
-	font-size: 1rem;
-	color: #f5f5f5;
+  font-size: 1rem;
+  color: #f5f5f5;
 }
 
-/* Alerts Section */
+/* ===================================================
+   CYBER ALERTS SECTION
+   =================================================== */
 .alert-img {
-	height: 200px;
-	object-fit: cover;
+  height: 200px;
+  object-fit: cover;
 }
 
 .card-title {
-	color: #1b9f70;
-	font-size: 1.1rem;
+  color: #1b9f70;
+  font-size: 1.1rem;
 }
 
 .card-text {
-	font-size: 0.95rem;
-	color: #333;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-/* Safety Tips */
+/* ===================================================
+   SAFETY TIPS SECTION
+   =================================================== */
 .tip-card {
-	background: #f5f5f5;
-	transition: transform 0.2s ease, background 0.3s ease;
+  background: #f5f5f5;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .tip-card:hover {
-	transform: translateY(-5px);
-	background: #e9f8f1;
+  transform: translateY(-5px);
+  background: #e9f8f1;
 }
 
 .tip-card i {
-	width: 28px;
-	height: 28px;
-	color: #21d596;
-	margin-bottom: 10px;
+  width: 28px;
+  height: 28px;
+  color: #21d596;
+  margin-bottom: 10px;
 }
 
 .tip-card h4 {
-	color: #1b9f70;
-	margin-bottom: 10px;
+  color: #1b9f70;
+  margin-bottom: 10px;
 }
 
 .tip-card p {
-	font-size: 0.95rem;
-	color: #333;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-/* Banner Section */
+/* ===================================================
+   CLOSING BANNER
+   =================================================== */
 .banner h3 {
-	color: #1b9f70;
-	font-size: 1.5rem;
-	margin-bottom: 0.5rem;
+  color: #1b9f70;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .banner p {
-	font-size: 1rem;
-	color: #000;
+  font-size: 1rem;
+  color: #000;
 }
 
-/* Footer container */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end; /* keeps content aligned low */
-  flex-wrap: wrap;
-
-  /* 🔽 Optional fine-tuning of visible height */
-  min-height: 25px;
-
-  position: relative;
-  text-align: justify; /* text is neatly spaced */
-  width: 100%;
-}
-
-/* Left section (Privacy & Terms) */
-.footer-left a {
-  color: #fff;
-  margin-right: 10px;
-  font-size: 12px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-left a:hover {
-  color: #67c8b1;
-}
-
-/* Center section (Social Icons) */
-.footer-center {
-  text-align: center;
-  flex: 1;
-}
-
-.footer-center a {
-  color: #fff;
-  margin: 0 6px;
-  font-size: 13px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-center a:hover {
-  color: #67c8b1;
-}
-
-/* Right section (Copyright) */
-.footer-right {
-  position: absolute;
-  bottom: 4px;
-  right: 12px;
-  text-align: right;
-}
-
-.footer-right p {
-  font-size: 11px;
-  color: #aaa;
-  margin: 0;
-  line-height: 1;
-}
+/* ===================================================
+   FOOTER & HEADER ARE INHERITED FROM HOME.CSS
+   =================================================== */
+/* No footer/header styles here — fully inherited */
