@@ -116,6 +116,25 @@ body {
 }
 
 /* ===================================================
+   CARD HOVER ANIMATION
+   =================================================== */
+.card,
+.tip-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.tip-card:hover {
+  transform: translateY(-8px); /* ⬅ Moves up slightly when hovered */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Adds subtle shadow effect */
+}
+
+.card:active,
+.tip-card:active {
+  transform: translateY(-4px);
+}
+
+/* ===================================================
    FOOTER & HEADER ARE INHERITED FROM HOME.CSS
    =================================================== */
 /* No footer/header styles here — fully inherited */
