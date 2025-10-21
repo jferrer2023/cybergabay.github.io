@@ -2,170 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CyberGabay - Cyber Alerts</title>
+  <title>CyberGabay - Data Privacy</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="../styles/style-home.css">
   <link rel="stylesheet" href="../styles/style-dataprivacy.css">
+
+  <style>
+    /* Adjust for fixed header */
+    body {
+      padding-top: 120px;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Fixed Header (title bar + navbar) -->
-  <header class="fixed-header">
-    <div class="title-bar">
-      <img src="../images/image1.png" alt="CyberGabay Logo" class="logo">
-      <h1 class="site-title">CyberGabay</h1>
-    </div>
+  <!-- ===================================================
+       HEADER (Loaded from header.html)
+       =================================================== -->
+  <div id="header-placeholder"></div>
 
-    <nav class="navbar">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="cyberalerts.html">Cyber Alerts</a></li>
-        <li><a href="dataprotection.html">Data Protection</a></li>
-        <li><a href="dataprivacy.html"class="active">Data Privacy</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="threatsimulator.html">Threat Simulator</a></li>
-        <li><a href="challenges.html">Challenges</a></li>
-        <li><a href="reportanincident.html">Report an Incident</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- ===================================================
+       MAIN CONTENT
+       =================================================== -->
+  <main class="content text-center">
+    <div class="container py-5">
+      <h2 class="mb-3">DATA PRIVACY</h2>
+      <p class="mb-5">
+        The practice of protecting personal information and ensuring individuals have control over how their data is collected, used, and shared — all in compliance with data protection laws and regulations.
+      </p>
 
-  <!-- Main Content -->
-  <main class="content">
-  <center>
-    <br><br>
-    <br><br>
-    <br><br>
-    <h2>DATA PRIVACY</h2>
-    <p>The practice of protecting personal information and ensuring individuals have control over how their data is collected, used, and shared — all in compliance with data protection laws and regulations.</p>
-    <p>
-       <section class="features">
-    <div class="container">
-      <div class="section-header">
-
-      <div class="grid">
+      <!-- Features Section -->
+      <div class="row g-4 justify-content-center">
         <!-- Feature 1 -->
-        <a href="https://privacy.gov.ph" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>National Privacy Commission</h3>
-          <p>Learn more about Data Privacy and the role of the National Privacy Commission (NPC) in enforcing the Data Privacy Act of 2012.</p>
-          <div class="hover-line"></div>
-        </div> </a>
+        <div class="col-md-6 col-lg-3">
+          <a href="https://privacy.gov.ph" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>National Privacy Commission</h3>
+              <p>Learn more about Data Privacy and the NPC’s role in enforcing the Data Privacy Act of 2012.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
-      <!-- Feature 2 -->
-       <a href="https://www.youtube.com/watch?v=6jfn8XDrYxM" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>Ano nga ba ang #DataPrivacy?</h3>
-          <p>Find out what #DataPrivacy means, how it protects your personal information, and why it’s important to stay safe and in control online.</p>
-          <div class="hover-line"></div>
-        </div> </a>
+        <!-- Feature 2 -->
+        <div class="col-md-6 col-lg-3">
+          <a href="https://www.youtube.com/watch?v=6jfn8XDrYxM" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>Ano nga ba ang #DataPrivacy?</h3>
+              <p>Find out what #DataPrivacy means, how it protects you, and why it’s important to stay safe online.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
         <!-- Feature 3 -->
-        <a href="https://www.youtube.com/watch?v=Kz-INokaRFs" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>Know Your Data Privacy Rights!</h3>
-          <p>You have the right to access, correct, and protect your personal data. Stay informed, stay secure, and exercise your rights under the law.</p>
-          <div class="hover-line"></div>
-        </div> </a>
+        <div class="col-md-6 col-lg-3">
+          <a href="https://www.youtube.com/watch?v=Kz-INokaRFs" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>Know Your Data Privacy Rights!</h3>
+              <p>You have the right to access, correct, and protect your personal data. Stay informed and secure.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
         <!-- Feature 4 -->
-      <a href="https://privacy.gov.ph/30-ways-to-love-yourself-online/" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>30 Ways To Love Yourself Online</h3>
-          <p>Discover 30 simple and empowering tips to protect your well-being, stay safe, and build confidence in your digital life.</p>
-          <div class="hover-line"></div>
-        </div> </a>
+        <div class="col-md-6 col-lg-3">
+          <a href="https://privacy.gov.ph/30-ways-to-love-yourself-online/" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>30 Ways To Love Yourself Online</h3>
+              <p>Discover 30 simple and empowering tips to stay safe, confident, and well in your digital life.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
         <!-- Feature 5 -->
-      <a href="https://privacy.gov.ph/kd/" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>Kabataang Digital Campaign</h3>
-          <p>Empowers Filipino youth to become responsible, safe, and mindful online citizens through digital literacy and cyber safety awareness.</p>
-          <div class="hover-line"></div>
-        </div> </a>
+        <div class="col-md-6 col-lg-3">
+          <a href="https://privacy.gov.ph/kd/" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>Kabataang Digital Campaign</h3>
+              <p>Empowers Filipino youth to become responsible, safe, and mindful online citizens.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
+        <!-- Feature 6 -->
+        <div class="col-md-6 col-lg-3">
+          <a href="https://privacy.gov.ph/psst-2/" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>Privacy Safety Security & Trust Online</h3>
+              <p>Promoting privacy, safety, and trust to empower users and protect personal data.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
-           <!-- Feature 6 -->
-       <a href="https://privacy.gov.ph/psst-2/" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>Privacy Safety Security & Trust Online</h3>
-          <p>Promoting privacy, safety, security, and trust online to empower users, protect personal data, and build a more safer digital community.</p>
-          <div class="hover-line"></div>
-        </div> </a>
+        <!-- Feature 7 -->
+        <div class="col-md-6 col-lg-3">
+          <a href="https://privacy.gov.ph/competency-program/" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>Data Privacy Competency Program</h3>
+              <p>Develops skills to protect data, uphold privacy rights, and promote responsible practices.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
 
-             <!-- Feature 7 -->
-       <a href="https://privacy.gov.ph/competency-program/" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>Data Privacy Competency Program</h3>
-          <p>A program that develops skills to protect personal data, uphold privacy rights, and encourage responsible digital practices.</p>
-          <div class="hover-line"></div>
-        </div> </a>
-
-      
-                <!-- Feature 8 -->
-       <a href="https://privacy.gov.ph/news-2/" target="_blank" class="feature-link">
-        <div class="feature-card">
-          <div class="icon">
-          <img src="../images/icon-privacy.png" alt="Privacy Icon">
-          </div>
-          <h3>Data Privacy News and Updates</h3>
-          <p>Stay informed with the latest news, trends, and important updates on data privacy to keep your digital life protected.</p>
-          <div class="hover-line"></div>
-        </div> </a>
-
+        <!-- Feature 8 -->
+        <div class="col-md-6 col-lg-3">
+          <a href="https://privacy.gov.ph/news-2/" target="_blank" class="feature-link">
+            <div class="feature-card">
+              <div class="icon">
+                <img src="../images/icon-privacy.png" alt="Privacy Icon">
+              </div>
+              <h3>Data Privacy News & Updates</h3>
+              <p>Stay informed with the latest news, trends, and important updates on data privacy.</p>
+              <div class="hover-line"></div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
-  </section>
-
-  <script>
-    lucide.createIcons();
-  </script>
-
-      </center>
-    </p>
-
-<!-- footer -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-links">
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-
-    <div class="social-icons">
-      <a href="https://facebook.com/CyberGabay" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-    </div>
-
-    <p class="copyright">&copy; 2025 CyberGabay</p>
-  </div>
-</footer>
-
   </main>
+
+  <!-- ===================================================
+       FOOTER PLACEHOLDER
+       =================================================== -->
+  <div id="footer-placeholder"></div>
+
+  <!-- ===================================================
+       DYNAMIC HEADER & FOOTER LOADER + ACTIVE LINK
+       =================================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // ✅ Load header
+      fetch("header.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("header-placeholder").innerHTML = data;
+
+          // ✅ Highlight active navbar link
+          const currentPage = "dataprivacy.html";
+          const navLinks = document.querySelectorAll(".nav-link");
+
+          navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+            if (href && href.includes(currentPage)) {
+              link.classList.add("active");
+            } else {
+              link.classList.remove("active");
+            }
+          });
+        });
+
+      // ✅ Load footer
+      fetch("footer.html")
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        })
+        .catch(err => console.error("Footer load error:", err));
+    });
+  </script>
 </body>
 </html>

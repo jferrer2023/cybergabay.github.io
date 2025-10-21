@@ -1,172 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberGabay - Resources</title>
 
   <!-- ===================================================
-       CSS IMPORTS
+       BOOTSTRAP & ICONS
        =================================================== -->
-  <!-- ✅ Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-  <!-- ✅ Google Font for Orbitron -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- ✅ Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- ✅ Custom CSS -->
+  <!-- ===================================================
+       CUSTOM STYLES
+       =================================================== -->
   <link rel="stylesheet" href="../styles/style-home.css">
   <link rel="stylesheet" href="../styles/style-resources.css">
 </head>
 
 <body>
+
   <!-- ===================================================
-       HEADER (Loaded Dynamically)
+       HEADER (LOADED DYNAMICALLY)
        =================================================== -->
-  <div id="header"></div>
+  <div id="header-placeholder"></div>
 
   <!-- ===================================================
        MAIN CONTENT
        =================================================== -->
-  <main class="content container my-5 pt-5">
+  <main class="container my-5 pt-5">
 
     <!-- ===================================================
-         HERO / SLIDER SECTION
+         SLIDER SECTION
          =================================================== -->
-    <section class="slider text-center mt-5">
-      <div class="slider__header mb-4">
-        <h2>RESOURCES</h2>
-        <p>Discover our most popular and transformative learning experiences</p>
+   <section class="slider text-center my-5">
+  <div class="slider__header mb-4">
+    <h2 class="fw-bold">RESOURCES</h2>
+    <p class="text-muted">Discover our most popular and transformative learning experiences</p>
+  </div>
+
+  <div class="slider__container position-relative">
+
+    <!-- Slides -->
+    <div class="slide active row g-4">
+      <div class="col-md-6 slide__image position-relative">
+        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop" class="img-fluid rounded" alt="Udemy Cybersecurity">
+        <div class="slide__overlay"></div>
+        <div class="slide__stats text-white position-absolute bottom-0 start-0 p-3">
+          <span class="badge bg-success">Cybersecurity</span> by Udemy Experts
+        </div>
       </div>
+      <div class="col-md-6 slide__content text-start">
+        <h3>Udemy Cybersecurity Bootcamp</h3>
+        <p>Kickstart your cybersecurity journey with beginner to advanced courses on ethical hacking, network defense, and risk management.</p>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-circle text-success me-2 small"></i> Hands-on labs & projects</li>
+          <li><i class="fa fa-circle text-success me-2 small"></i> Beginner-friendly</li>
+          <li><i class="fa fa-circle text-success me-2 small"></i> Lifetime course access</li>
+          <li><i class="fa fa-circle text-success me-2 small"></i> Certificate of completion</li>
+        </ul>
+        <a href="https://www.udemy.com/course/personal-digital-security-everyone-must-have-cybersecurity/" target="_blank" class="btn btn-success mt-2">View Details</a>
+      </div>
+    </div>
 
-      <div class="slider__container position-relative rounded overflow-hidden">
+    <!-- Add more slides with same structure -->
+    <!-- Example:
+    <div class="slide row g-4"> ... </div>
+    -->
 
-        <!-- === Slide 1 === -->
-        <div class="slide active row g-0 align-items-center">
-          <div class="col-md-6 slide__image position-relative">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=500&fit=crop" class="img-fluid w-100" alt="Udemy Cybersecurity">
-            <div class="slide__overlay"></div>
-            <div class="slide__stats position-absolute bottom-0 start-0 m-3 text-white">
-              <span class="badge bg-success">Cybersecurity</span> by Udemy Experts
-            </div>
-          </div>
+    <!-- Controls -->
+    <div class="controls position-absolute top-50 start-0 end-0 d-flex justify-content-between px-3">
+      <button class="btn btn-light rounded-circle" id="prevSlide">‹</button>
+      <button class="btn btn-light rounded-circle" id="nextSlide">›</button>
+    </div>
+  </div>
 
-          <div class="col-md-6 slide__content text-start p-4">
-            <h3>Udemy Cybersecurity Bootcamp</h3>
-            <p>Kickstart your cybersecurity journey with beginner to advanced courses on ethical hacking, network defense, and risk management.</p>
-            <div class="row highlights">
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Hands-on labs</div>
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Beginner-friendly</div>
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Lifetime access</div>
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Certificate</div>
-            </div>
-            <a href="https://www.udemy.com/course/personal-digital-security-everyone-must-have-cybersecurity/?couponCode=LETSLEARNNOW" target="_blank" class="btn btn-success mt-3">View Details →</a>
-          </div>
-        </div>
+  <!-- Dots -->
+  <div class="dots mt-3 text-center">
+    <button class="active" data-slide="0"></button>
+    <button data-slide="1"></button>
+    <button data-slide="2"></button>
+    <button data-slide="3"></button>
+  </div>
+</section>
 
-        <!-- === Slide 2 === -->
-        <div class="slide row g-0 align-items-center">
-          <div class="col-md-6 slide__image position-relative">
-            <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=800&h=500&fit=crop" class="img-fluid w-100" alt="CompTIA Security+">
-            <div class="slide__overlay"></div>
-            <div class="slide__stats position-absolute bottom-0 start-0 m-3 text-white">
-              <span class="badge bg-success">Certification</span> by CompTIA
-            </div>
-          </div>
 
-          <div class="col-md-6 slide__content text-start p-4">
-            <h3>CompTIA Security+ Certification</h3>
-            <p>Validate your core cybersecurity skills and gain an industry-recognized credential to boost your IT career.</p>
-            <div class="row highlights">
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Core security principles</div>
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Risk management</div>
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Exam resources</div>
-              <div class="col-6"><i class="fa fa-check-circle text-success me-1"></i> Global certification</div>
-            </div>
-            <a href="https://www.comptia.org/certifications/security" target="_blank" class="btn btn-success mt-3">View Details →</a>
-          </div>
-        </div>
+        <!-- TODO: Add other slides (CompTIA, Cisco, CEH) following same structure -->
 
-        <!-- === Slider Controls === -->
+        <!-- Controls -->
         <div class="controls position-absolute top-50 start-0 end-0 d-flex justify-content-between px-3">
           <button class="btn btn-light rounded-circle" onclick="prevSlide()">‹</button>
           <button class="btn btn-light rounded-circle" onclick="nextSlide()">›</button>
         </div>
       </div>
 
-      <!-- === Dots === -->
+      <!-- Dots -->
       <div class="dots mt-3">
         <button class="active" onclick="goToSlide(0)"></button>
         <button onclick="goToSlide(1)"></button>
+        <button onclick="goToSlide(2)"></button>
+        <button onclick="goToSlide(3)"></button>
       </div>
     </section>
 
     <!-- ===================================================
          COURSES SECTION
          =================================================== -->
-    <section class="courses text-center my-5">
+    <section class="courses text-center py-5">
       <div class="courses__header mb-4">
-        <h2>Courses and Tools</h2>
-        <p>Browse top cybersecurity programs and certifications to level up your career</p>
+        <h2 class="fw-bold">Courses and Tools</h2>
+        <p class="text-muted">Browse through top cybersecurity programs and certifications to level up your career</p>
       </div>
 
       <div class="row g-4">
-        <!-- Course Card Template -->
-        <div class="col-md-4">
-          <div class="card h-100 border-0 shadow-sm">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop" class="card-img-top" alt="Cisco CCNA">
-            <div class="card-body text-start">
-              <h5 class="card-title">Cisco CCNA</h5>
-              <p class="card-text">Networking fundamentals with a strong focus on security.</p>
-              <p class="text-muted small mb-2">Cisco</p>
-              <a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html" target="_blank" class="btn btn-outline-success btn-sm">View Details</a>
-            </div>
-          </div>
-        </div>
 
-        <!-- Add similar cards here for CEH, CySA+, etc. -->
+  <!-- Course 1 -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop"
+           class="card-img-top" alt="Udemy Cybersecurity">
+      <div class="card-body">
+        <h5 class="card-title">Udemy Cybersecurity Bootcamp</h5>
+        <p class="card-text">Beginner to advanced courses in ethical hacking and defense.</p>
+        <p class="text-muted small">Udemy Experts</p>
+        <a href="https://www.udemy.com/course/personal-digital-security-everyone-must-have-cybersecurity/"
+           target="_blank" class="btn btn-success btn-sm">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course 2 -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?w=400&h=250&fit=crop"
+           class="card-img-top" alt="CompTIA Security+">
+      <div class="card-body">
+        <h5 class="card-title">CompTIA Security+</h5>
+        <p class="card-text">Industry-standard certification for core cybersecurity skills.</p>
+        <p class="text-muted small">CompTIA</p>
+        <a href="https://www.comptia.org/certifications/security"
+           target="_blank" class="btn btn-success btn-sm">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course 3 -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=250&fit=crop"
+           class="card-img-top" alt="Cisco CCNA">
+      <div class="card-body">
+        <h5 class="card-title">Cisco CCNA</h5>
+        <p class="card-text">Networking fundamentals with a strong focus on security.</p>
+        <p class="text-muted small">Cisco</p>
+        <a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html"
+           target="_blank" class="btn btn-success btn-sm">View Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Course 4 -->
+  <div class="col-md-3">
+    <div class="card h-100 shadow-sm">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=250&fit=crop"
+           class="card-img-top" alt="CEH Certification">
+      <div class="card-body">
+        <h5 class="card-title">Certified Ethical Hacker (CEH)</h5>
+        <p class="card-text">Master penetration testing and ethical hacking skills.</p>
+        <p class="text-muted small">EC-Council</p>
+        <a href="https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/"
+           target="_blank" class="btn btn-success btn-sm">View Details</a>
+      </div>
+    </div>
+  </div>
+
+
       </div>
     </section>
+
   </main>
 
   <!-- ===================================================
-       FOOTER (Loaded Dynamically)
+       FOOTER (LOADED DYNAMICALLY)
        =================================================== -->
-  <div id="footer"></div>
+  <div id="footer-placeholder"></div>
 
   <!-- ===================================================
        JS IMPORTS
        =================================================== -->
-  <!-- ✅ Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../scripts/script-resources.js"></script>
 
-  <!-- ✅ Slider Script -->
-  <script src="/scripts/script-resources.js"></script>
-
-  <!-- ✅ Dynamic Header/Footer Loader -->
+  <!-- ===================================================
+       DYNAMIC HEADER & FOOTER LOADER + ACTIVE LINK
+       =================================================== -->
   <script>
-    // Load header and footer dynamically
+    // Load header dynamically
     fetch("header.html")
       .then(res => res.text())
       .then(data => {
-        document.getElementById("header").innerHTML = data;
+        document.getElementById("header-placeholder").innerHTML = data;
 
-        // Highlight active page link
+        // ✅ Highlight active navbar link
         const currentPage = "resources.html";
-        document.querySelectorAll(".nav-link").forEach(link => {
-          if (link.getAttribute("href")?.includes(currentPage)) {
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute("href");
+          if (href && href.includes(currentPage)) {
             link.classList.add("active");
           } else {
             link.classList.remove("active");
           }
         });
-      });
+      })
+      .catch(err => console.error("Header load error:", err));
 
+    // Load footer dynamically
     fetch("footer.html")
       .then(res => res.text())
-      .then(data => document.getElementById("footer").innerHTML = data);
+      .then(data => document.getElementById("footer-placeholder").innerHTML = data)
+      .catch(err => console.error("Footer load error:", err));
   </script>
+
 </body>
 </html>
