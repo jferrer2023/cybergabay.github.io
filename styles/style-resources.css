@@ -1,167 +1,44 @@
-/* ===================================================
-   CYBERGABAY - RESOURCES PAGE STYLES
-   Compatible with Bootstrap 5.3
-   =================================================== */
-
-/* ========= GENERAL RESET ========= */
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #f8f9fa;
-  color: #212529;
-  margin: 0;
-  padding: 0;
-}
-
-/* ========= PAGE TITLE ========= */
-.slider__header h2,
-.courses__header h2 {
-  font-family: "Orbitron", sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #198754; /* Bootstrap success green */
-}
-
-.slider__header p,
-.courses__header p {
-  color: #6c757d;
-  font-size: 0.95rem;
+  background: #fff;
+  color: #000;
+  font-family: "Poppins", Arial, sans-serif;
 }
 
 /* ===================================================
-   SLIDER SECTION
+   SLIDER STYLES
    =================================================== */
-.slider {
-  position: relative;
-  overflow: hidden;
-}
-
 .slide {
   display: none;
-  animation: fadeIn 0.6s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .slide.active {
   display: flex;
-}
-
-.slide__image img {
-  object-fit: cover;
-  height: 100%;
-}
-
-.slide__overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-/* Text and buttons inside slides */
-.slide__content h3 {
-  font-weight: 600;
-  color: #198754;
-}
-
-.slide__content p {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-.slide__content .btn {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.slide__content .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
-}
-
-/* ===================================================
-   SLIDER CONTROLS
-   =================================================== */
-.controls button {
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  border: none;
-  background-color: rgba(255, 255, 255, 0.9);
-  color: #198754;
-  transition: all 0.2s ease;
-}
-
-.controls button:hover {
-  background-color: #198754;
-  color: #fff;
-}
-
-/* Dots below slider */
-.dots {
-  text-align: center;
+  opacity: 1;
 }
 
 .dots button {
+  width: 12px;
+  height: 12px;
   border: none;
-  width: 10px;
-  height: 10px;
   border-radius: 50%;
-  margin: 0 5px;
   background-color: #ccc;
-  transition: background-color 0.3s;
+  margin: 0 5px;
+  transition: background-color 0.3s ease;
 }
 
-.dots button.active,
+.dots button.active {
+  background-color: #198754; /* Bootstrap green */
+}
+
 .dots button:hover {
-  background-color: #198754;
+  background-color: #28a745;
 }
 
-/* ===================================================
-   COURSES SECTION
-   =================================================== */
-.card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
 
+/* Courses */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-}
-
-.card-title {
-  color: #198754;
-  font-weight: 600;
-}
-
-.card-text {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* ===================================================
-   ANIMATIONS
-   =================================================== */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ===================================================
-   RESPONSIVE TWEAKS
-   =================================================== */
-@media (max-width: 768px) {
-  .slide {
-    flex-direction: column;
-  }
-
-  .slide__content {
-    text-align: center;
-  }
-
-  .slide__content .row.highlights {
-    text-align: left;
-  }
+  transition: transform 0.3s ease;
 }

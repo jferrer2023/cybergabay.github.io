@@ -1,97 +1,57 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* ================================
+   Data Privacy Page Styling
+================================ */
 body {
-  font-family: system-ui, sans-serif;
-  background: #fff;
+  font-family: "Poppins", system-ui, sans-serif;
+  background-color: #fff;
   color: #333;
-  line-height: 1.6;
 }
 
-.features {
-  padding: 6rem 1.5rem;
-  background: white;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Section Header */
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.section-header h2 {
-  font-size: 2.5rem;
+/* Title & Intro */
+h2 {
   font-weight: 700;
-  color: #111;
-  margin-bottom: 1rem;
+  color: #205a40;
 }
 
-.section-header p {
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 600px;
-  margin: 0 auto;
+p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+/* Feature Section */
+.feature-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-/* Feature Cards */
 .feature-card {
-  background: white;
-  padding: 2rem;
+  background: #fff;
   border-radius: 1rem;
+  padding: 2rem;
   border: 1px solid #eee;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
-  cursor: pointer;
+  height: 100%;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-8px);
   border-color: #1d6135;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-.feature-link {
-  text-decoration: none;   /* remove underline */
-  color: inherit;          /* keep text color as is */
-  display: block;          /* make link cover the card */
-}
 
+/* Icon Section */
 .icon {
-  width: 4rem;             /* green square size */
+  width: 4rem;
   height: 4rem;
-  margin-bottom: 1.5rem;
+  background: #22c55e;
   border-radius: 0.75rem;
+  margin: 0 auto 1.5rem;
   display: flex;
-  align-items: center;     /* center vertically */
-  justify-content: center; /* center horizontally */
-  background: #22c55e;     /* solid green OR use gradient */
+  align-items: center;
+  justify-content: center;
   transition: transform 0.3s ease;
 }
 
@@ -99,20 +59,13 @@ body {
   transform: scale(1.1);
 }
 
-.icon i {
-  width: 2rem;
-  height: 2rem;
-  color: white;
-}
-
 .icon img {
-  max-width: 60%;          /* scale image down to fit */
-  max-height: 60%;
-  object-fit: contain;     /* keep proportions */
-  display: block;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
 }
 
-/* Title + Text */
+/* Text Styling */
 .feature-card h3 {
   font-size: 1.25rem;
   font-weight: 600;
@@ -122,12 +75,12 @@ body {
 }
 
 .feature-card:hover h3 {
-  color: #a2e4a4;
+  color: #22c55e;
 }
 
 .feature-card p {
   color: #666;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 /* Hover Line */

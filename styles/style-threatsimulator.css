@@ -1,46 +1,44 @@
-/* Base body styling */
+/* ==============================================
+   THREAT SIMULATOR PAGE STYLES
+   ============================================== */
+
 body {
-  background: #fff; /* white background for consistency */
+  background: #fff;
+  font-family: Arial, sans-serif;
+  color: #000;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #000; /* default text color black */
 }
 
 /* Main container */
 main {
-  padding: 40px 20px;
-  max-width: 1100px;
-  margin: 100px auto; /* space below fixed header */
-  text-align: center;
+  margin-top: 120px; /* space below fixed header */
 }
-
 
 /* Scenario cards */
 .scenario {
-  background: #f8f8f8; /* same as alert/tips cards */
+  background: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: 2rem;
   margin-bottom: 1.5rem;
-  text-align: left;
+  text-align: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
   transition: transform 0.2s ease, background 0.3s ease;
-  color: #000;
 }
 
 .scenario:hover {
   transform: translateY(-5px);
-  background: #e9f8f1; /* soft green hover */
+  background: #e9f8f1;
 }
 
 .scenario h2 {
   color: #1b9f70;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
-/* Options (buttons) */
+/* Buttons */
 .options button {
   display: block;
   width: 100%;
@@ -68,9 +66,9 @@ main {
 }
 
 .feedback.correct {
-  color: #1b9f70; /* green for correct */
+  color: #1b9f70;
 }
 
 .feedback.wrong {
-  color: #d9534f; /* red for wrong */
+  color: #d9534f;
 }

@@ -1,20 +1,35 @@
+/* ===============================
+   CONTACT US PAGE (FINAL NO-GAP)
+   =============================== */
+
 body {
+  background: #ffffff;
   font-family: 'Courier New', monospace;
-  background: #f5f3f3;
   color: #00ff41;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  flex-direction: column;
 }
 
+/* Adjusted spacing to fit viewport */
+.content {
+  flex: 1;
+  padding-top: 90px; /* space for fixed header */
+  padding-bottom: 5px; /* reduced space before footer */
+}
+
+/* Terminal Window */
 .terminal {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   background: #ffffff;
   border: 2px solid #00ff41;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
   overflow: hidden;
+  margin: 20px auto 0; /* less bottom margin */
 }
 
 .terminal-header {
@@ -47,6 +62,7 @@ body {
   padding: 20px;
 }
 
+/* Typing Animation */
 .line {
   margin: 0 0 8px 0;
   white-space: nowrap;
@@ -70,4 +86,12 @@ body {
 
 @keyframes blink {
   50% { border-color: transparent; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .terminal {
+    width: 70%;
+    margin-top: 10px;
+  }
 }

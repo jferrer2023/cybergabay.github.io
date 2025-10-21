@@ -11,7 +11,7 @@ body {
    TITLE BAR (Top Section with Logo + Site Title)
    =================================================== */
 .title-bar {
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: white;
   padding: 8px 16px;
 }
@@ -70,7 +70,7 @@ body {
    ✅ ACTIVE NAVLINK (CURRENT PAGE HIGHLIGHT)
    =================================================== */
 .navbar-nav .nav-link.active {
-  background-color: #1a1a1a;
+  background-color: #000000; /*#1a1a1a;*/
   color: #a2e4a4 !important; /* ✅ Green highlight for active page */
   font-weight: bold;
 }
@@ -175,4 +175,11 @@ p {
   color: #aaa;
   margin: 0;
   line-height: 1;
+}
+/* ===================================================
+   ADJUST BOTTOM SPACE BEFORE FOOTER
+   =================================================== */
+main.content {
+  padding-bottom: 0 !important;  /* remove extra white gap before footer */
+  margin-bottom: 0 !important;
 }
