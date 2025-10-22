@@ -45,68 +45,32 @@
 
 
 
-<!-- Matrix Overlay -->
-<div id="matrix-overlay">
-  <canvas id="matrix-canvas"></canvas>
+<!-- Glitch overlay -->
+<div id="glitch-overlay">
+  <div class="glitch"></div>
 </div>
 
+<!-- Glitch Script -->
 <script>
-const startButton = document.querySelector('.btn-success');
+  const button = document.querySelector('.btn-success');
+  const overlay = document.getElementById('glitch-overlay');
 
-startButton.addEventListener('click', function (e) {
-  e.preventDefault();
-  
-  const overlay = document.getElementById('matrix-overlay');
-  const canvas = document.getElementById('matrix-canvas');
-  const ctx = canvas.getContext('2d');
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
+  button.addEventListener('click', (e) => {
+    e.preventDefault(); // Stop normal link jump
+    overlay.style.display = 'block';
+    overlay.querySelector('.glitch').style.opacity = '1';
 
-  // Characters used in Matrix effect
-  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*';
-  const fontSize = 16;
-  const columns = Math.floor(width / fontSize);
-  const drops = Array(columns).fill(1);
+    // Animate glitch for 1s
+    setTimeout(() => {
+      overlay.style.transition = 'opacity 0.5s ease-out';
+      overlay.style.opacity = '0';
+    }, 1000);
 
-  // Resize handling
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
+    // Redirect to home.html
+    setTimeout(() => {
+      window.location.href = 'html/home.html';
+    }, 1400);
   });
-
-  overlay.style.opacity = 1; // Show overlay
-  let frame = 0;
-  let animationActive = true;
-
-  function drawMatrix() {
-    if (!animationActive) return;
-    ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
-    ctx.fillRect(0, 0, width, height);
-
-    ctx.fillStyle = '#00FF00';
-    ctx.font = fontSize + 'px monospace';
-
-    for (let i = 0; i < drops.length; i++) {
-      const text = characters.charAt(Math.floor(Math.random() * characters.length));
-      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      if (drops[i] * fontSize > height && Math.random() > 0.975) drops[i] = 0;
-      drops[i]++;
-    }
-
-    frame++;
-    if (frame < 80) { // Duration of effect (~1.5 seconds)
-      requestAnimationFrame(drawMatrix);
-    } else {
-      animationActive = false;
-      document.body.classList.add('fade-out');
-      setTimeout(() => {
-        window.location.href = startButton.getAttribute('href');
-      }, 500);
-    }
-  }
-
-  drawMatrix();
-});
 </script>
 
 
