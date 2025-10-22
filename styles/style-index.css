@@ -74,3 +74,38 @@ body {
   background-color: #45a049;
 }
 
+
+/* ===================================================
+   CYBERSEC-STYLE GLITCH TRANSITION
+   =================================================== */
+
+/* ===================================================
+   MATRIX TRANSITION EFFECT
+   =================================================== */
+#matrix-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in;
+}
+
+#matrix-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fade out body after animation */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+
+
