@@ -184,3 +184,17 @@ p {
   margin: 0;
   line-height: 1;
 }
+
+
+
+
+
+/* Only fade in for pages with fade-page class */
+body.fade-page {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+body.fade-page.fade-in {
+  opacity: 1;
+}
