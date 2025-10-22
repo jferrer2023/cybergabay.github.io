@@ -74,56 +74,45 @@ body {
   background-color: #45a049;
 }
 
-/* ================================
-   GLITCH TRANSITION EFFECT
-   ================================ */
-#glitch-overlay {
+/* GLITCH EFFECT */
+/* =========== HACKING RAIN + GLITCH BANDS =========== */
+
+/* Hack overlay: fully covers everything */
+#hack-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: black;
-  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: black; /* opaque immediately */
+  z-index: 99999;   /* higher than any other element */
   display: none;
-  overflow: hidden;
+  pointer-events: none;
+  justify-content: center;
+  align-items: center;
 }
 
-.glitch {
-  position: absolute;
-  top: 0;
-  left: 0;
+/* show when active */
+#hack-overlay.active {
+  display: flex;
+}
+
+/* Canvas covers screen */
+#hack-canvas {
   width: 100%;
   height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    #00ff41,
-    #00ff41 2px,
-    black 2px,
-    black 4px
-  );
-  opacity: 0;
-  animation: glitch-flicker 1s linear infinite;
+  display: block;
+  opacity: 1; /* visible immediately */
+}
+
+/* Glitch bands */
+#glitch-bands {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+  opacity: 0.9;
   pointer-events: none;
 }
-
-@keyframes glitch-flicker {
-  0%, 100% { opacity: 0; transform: translate(0, 0) skew(0deg); }
-  10% { opacity: 0.6; transform: translate(-5px, -2px) skew(-2deg); }
-  20% { opacity: 1; transform: translate(5px, 2px) skew(3deg); }
-  50% { opacity: 0.3; transform: translate(-3px, 1px) skew(-1deg); }
-  70% { opacity: 0.9; transform: translate(2px, -3px) skew(1deg); }
-}
-
-/* Subtle CRT flicker effect for atmosphere */
-@keyframes screen-flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.97; }
-}
-body {
-  animation: screen-flicker 0.08s infinite;
-}
-
 
 
 
