@@ -1,4 +1,18 @@
 /* ===================================================
+   FORCE CYBER ALERTS BACKGROUND
+   =================================================== */
+html, body {
+  background: none !important;
+  background-image: url('../images/image7.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+
+
+/* ===================================================
    GENERAL BODY & LAYOUT
    =================================================== */
 body {
@@ -7,6 +21,15 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+
+  background: none !important;
+  background-color: #ffffff; /* fallback */
+
+  background-image: url('../images/image7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* ===================================================
@@ -43,10 +66,7 @@ body {
   color: #21d596;
 }
 
-.hero-banner .overlay h2 {
-  font-size: 2rem;
-  color: #21d596;
-}
+
 
 .hero-banner .overlay p {
   font-size: 1rem;

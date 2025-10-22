@@ -1,63 +1,269 @@
+/* ===================================================
+   FORCE CYBER ALERTS BACKGROUND
+   =================================================== */
+html, body {
+  background: none !important;
+  background-image: url('../images/image7.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
+
+
+
+/* ===================================================
+   GENERAL BODY & LAYOUT
+   =================================================== */
 body {
-  background: #ffffff;
+  background: #fff;
   font-family: Arial, sans-serif;
   color: #000;
   margin: 0;
   padding: 0;
+
+  background: none !important;
+  background-color: #ffffff; /* fallback */
+
+  background-image: url('../images/image7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-/* Headings */
-.content h2 {
-  font-weight: 700;
-  color: #198754;
+.reporting-section {
+  padding: 4rem 1rem;
 }
 
-.content p {
-  font-size: 1rem;
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+
+.text-center p {
+  color: #555;
+  max-width: 700px;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.step-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.icon-box {
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #dbeafe;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box i {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #189a5d;
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.step-number {
+  width: 2rem;
+  height: 2rem;
+  background: #78b6ba;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.step-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.step-card p {
+  margin-bottom: 0.75rem;
   color: #555;
 }
 
-/* Steps Card */
-.incident-steps .card {
-  border-radius: 16px;
-  background: #ffffff;
+.step-card ul {
+  padding-left: 1rem;
+  margin: 0;
 }
 
-/* Report Cards */
-.report-card {
-  background: #ffffff;
-  border-radius: 16px;
-  transition: transform 0.25s ease, box-shadow 0.3s ease;
+.step-card ul {
+  list-style-type: none;
+  padding-left: 1.2em; /* add spacing for custom bullet */
+}
+
+.step-card ul li::before {
+  content: "•";
+  color: #2ca20b9f; /* blue */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+
+/*Contacts*/
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.incident-section {
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-header {
   text-align: center;
+  margin-bottom: 3rem;
 }
 
-.report-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+
+.section-header p {
+  color: #555;
+  max-width: 700px;
+  margin: auto;
 }
 
-.report-card h5 {
-  color: #000;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 10px;
+.incident-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
 
-.report-card p,
-.report-card a {
+.incident-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.incident-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.icon i {
+  width: 28px;
+  height: 28px;
+}
+
+.icon.red { background: #fee2e2; color: #dc2626; }
+.icon.blue { background: #dbeafe; color: #2563eb; }
+.icon.green { background: #dcfce7; color: #16a34a; }
+.icon.purple { background: #ede9fe; color: #7c3aed; }
+.icon.orange { background: #ffedd5; color: #ea580c; }
+.icon.indigo { background: #e0e7ff; color: #4f46e5; }
+
+.incident-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.incident-card p {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.contacts div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.contact {
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.contact.emergency { background: #dc2626; color: #fff; }
+.contact.phone { background: #4b5563; color: #fff; }
+.contact.website { background: #2563eb; color: #fff; }
+
+.reminders {
+  background: #fef9c3;
+  border: 1px solid #fde68a;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 3rem;
+}
+
+.reminders h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.reminders ul {
+  margin: 0;
+  padding-left: 1rem;
   color: #444;
-  font-size: 0.95rem;
-  text-decoration: none;
+  font-size: 0.9rem;
 }
-
-.report-card a:hover {
-  color: #198754;
-  text-decoration: underline;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .incident-steps ul {
-    padding-left: 1rem;
-  }
+/* Adjust spacing specifically for the report section */
+.reporting-section {
+  padding-top: 50px;   /* distance from navbar */
+  padding-bottom: 10px; /* distance to footer */
 }

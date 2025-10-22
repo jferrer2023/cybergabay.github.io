@@ -1,23 +1,47 @@
 /* ===================================================
-   PAGE: Data Protection
+   FORCE CYBER ALERTS BACKGROUND
    =================================================== */
+html, body {
+  background: none !important;
+  background-image: url('../images/image7.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+}
 
+
+
+/* ===================================================
+   GENERAL BODY & LAYOUT
+   =================================================== */
+body {
+  
+  font-family: Arial, sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+
+  background: none !important;
+  background-color: #ffffff; /* fallback */
+
+  background-image: url('../images/image7.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+   
 /* Overall Section Styling */
 .content {
-  background-color: #ffffff;
+
   color: #000;
   padding-bottom: 60px;
   min-height: 100vh;
 }
 
-h2 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  color: #45a049;
-  text-transform: uppercase;
-  margin-bottom: 0.5rem;
-}
 
 p {
   color: #333;
@@ -26,13 +50,13 @@ p {
   margin: 0 auto 2rem;
 }
 
+
 /* ===================================================
    FEATURE GRID (Bootstrap-aligned)
    =================================================== */
 
 .feature-card {
   background: #1a2d25;
-  color: #fff;
   border-radius: 12px;
   padding: 25px 15px;
   height: 100%;

@@ -1,14 +1,41 @@
 /* ===================================================
    GLOBAL STYLES
    =================================================== */
-body {
+html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+
+  /* Background image */
+  background-image: url('../images/image5.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* ===================================================
-   TITLE BAR (Top Section with Logo + Site Title)
+   MAIN CONTENT
+   =================================================== */
+main.content {
+  flex: 1 0 auto; /* Grow to fill space */
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.content .right-content {
+  max-width: 500px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 50px; /* Moves text left a bit from the edge */
+  padding: 1rem;
+}
+
+/* ===================================================
+   TITLE BAR (Header)
    =================================================== */
 .title-bar {
   background-color: #000000;
@@ -28,14 +55,9 @@ body {
 }
 
 /* ===================================================
-   NAVBAR (Main Navigation)
+   NAVBAR
    =================================================== */
-.navbar {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.navbar-nav {
+.navbar, .navbar-nav {
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -44,7 +66,6 @@ body {
   flex: 1 1 auto;
 }
 
-/* Navigation Links */
 .navbar-nav .nav-link {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 0.9rem;
@@ -61,33 +82,28 @@ body {
   border-right: 1px solid #222;
 }
 
-/* Remove right border on last item */
 .navbar-nav .nav-item:last-child .nav-link {
   border-right: none;
 }
 
-/* ===================================================
-   ✅ ACTIVE NAVLINK (CURRENT PAGE HIGHLIGHT)
-   =================================================== */
 .navbar-nav .nav-link.active {
-  background-color: #000000; /*#1a1a1a;*/
-  color: #a2e4a4 !important; /* ✅ Green highlight for active page */
+  background-color: #000000;
+  color: #a2e4a4 !important;
   font-weight: bold;
 }
 
-/* Hover Effect */
 .navbar-nav .nav-link:hover {
   background-color: #45a049;
 }
 
 /* ===================================================
-   TEXT CONTENT (Headings & Paragraphs)
+   TEXT STYLES
    =================================================== */
 h2 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #45a049;
+  color: #077c44;
   margin-bottom: 10px;
 }
 
@@ -96,13 +112,15 @@ p {
   font-size: 1rem;
   line-height: 1.6;
   color: #000000;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 /* ===================================================
-   FOOTER (Bottom Section)
+   FOOTER
    =================================================== */
+#footer {
+  flex-shrink: 0; /* Ensure footer does not shrink */
+}
+
 .footer {
   background: #111;
   color: #fff;
@@ -113,7 +131,6 @@ p {
   position: relative;
 }
 
-/* Footer container layout */
 .footer-container {
   display: flex;
   justify-content: space-between;
@@ -125,9 +142,6 @@ p {
   width: 100%;
 }
 
-/* ===================================================
-   FOOTER LEFT (Privacy & Terms Links)
-   =================================================== */
 .footer-left a {
   color: #fff;
   margin-right: 10px;
@@ -140,9 +154,6 @@ p {
   color: #67c8b1;
 }
 
-/* ===================================================
-   FOOTER CENTER (Social Media Icons)
-   =================================================== */
 .footer-center {
   text-align: center;
   flex: 1;
@@ -160,9 +171,6 @@ p {
   color: #67c8b1;
 }
 
-/* ===================================================
-   FOOTER RIGHT (Copyright)
-   =================================================== */
 .footer-right {
   position: absolute;
   bottom: 4px;
@@ -175,11 +183,4 @@ p {
   color: #aaa;
   margin: 0;
   line-height: 1;
-}
-/* ===================================================
-   ADJUST BOTTOM SPACE BEFORE FOOTER
-   =================================================== */
-main.content {
-  padding-bottom: 0 !important;  /* remove extra white gap before footer */
-  margin-bottom: 0 !important;
 }

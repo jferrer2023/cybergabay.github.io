@@ -1,23 +1,34 @@
 /* ===============================
-   CONTACT US PAGE (FINAL NO-GAP)
+   CONTACT US PAGE (COMPACT VERSION)
    =============================== */
 
-body {
-  background: #ffffff;
-  font-family: 'Courier New', monospace;
-  color: #00ff41;
+html, body {
+  background: none !important;
+  background-image: url('../images/image7.png') !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  font-family: 'Courier New', monospace;
+  color: #00ff41;
 }
 
-/* Adjusted spacing to fit viewport */
+/* ===================================================
+   GENERAL BODY & LAYOUT
+   =================================================== */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* Reduce space before footer */
 .content {
   flex: 1;
-  padding-top: 90px; /* space for fixed header */
-  padding-bottom: 5px; /* reduced space before footer */
+  padding-top: 10px; /* space for fixed header */
+  padding-bottom: 0px; /* ✅ corrected */
 }
 
 /* Terminal Window */
@@ -29,7 +40,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
   overflow: hidden;
-  margin: 20px auto 0; /* less bottom margin */
+  margin: 10px auto 0; /* smaller margin above/below */
 }
 
 .terminal-header {
@@ -92,6 +103,6 @@ body {
 @media (max-width: 768px) {
   .terminal {
     width: 70%;
-    margin-top: 10px;
+    margin-top: 5px;
   }
 }
