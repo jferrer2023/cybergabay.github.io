@@ -1,167 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>CyberGabay - Report an Incident</title>
 
-  <!-- ✅ Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- ✅ Google Font for 'Orbitron' (used in title bar) -->
+  <!-- ===================================================
+       CSS IMPORTS
+       =================================================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  
-  <!-- ✅ Custom CSS -->
-  <link rel="stylesheet" href="../styles/style-report.css" />
+  <link rel="stylesheet" href="../styles/style-home.css">
+  <link rel="stylesheet" href="../styles/style-reportanincident.css">
+
+  <style>
+    body { padding-top: 120px; }
+    .icon-box i { width: 1.5rem; height: 1.5rem; color: #189a5d; }
+    .step-number { width: 2rem; height: 2rem; background: #78b6ba; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.875rem; font-weight: bold; }
+  </style>
 </head>
 
 <body>
-  <!-- ===================================================
-       HEADER (Dynamically loaded from header.html)
-       =================================================== -->
+  <!-- HEADER -->
   <div id="header"></div>
 
-  <!-- ===================================================
-       MAIN CONTENT
-       =================================================== -->
-  <main class="content container py-5 mt-5">
-    <section class="text-center mb-5">
-      <h2 class="fw-bold text-success">REPORT A CYBER INCIDENT</h2>
-      <p class="text-muted">
-        Know where to report and how to act if you encounter cybercrime or online threats.
-      </p>
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <div class="container py-5">
+
+      <!-- Reporting Steps Section -->
+
+
+       <main class="content container" style="margin-top: 90px; margin-bottom: 10px;">
+  <section class="text-center">
+    
+      <h2>HOW TO REPORT AN INCIDENT</h2>
+      <p>Follow these step-by-step instructions to ensure your incident is properly reported and documented.</p>
     </section>
 
-    <!-- Steps to Take -->
-    <section class="incident-steps mb-5">
-      <div class="row justify-content-center">
-        <div class="col-md-10">
-          <div class="card shadow-sm border-0 p-4">
-            <h4 class="fw-bold mb-3">🛑 Steps to Take</h4>
-            <ul class="list-group list-group-flush text-start">
-              <li class="list-group-item">
-                1️⃣ Do not delete any evidence (screenshots, messages, or emails).
-              </li>
-              <li class="list-group-item">
-                2️⃣ Disconnect affected devices from the internet to prevent further attacks.
-              </li>
-              <li class="list-group-item">
-                3️⃣ Change your passwords immediately and enable 2FA where possible.
-              </li>
-              <li class="list-group-item">
-                4️⃣ Report the incident to the appropriate authorities below.
-              </li>
-              <li class="list-group-item">
-                5️⃣ Seek professional IT or cybersecurity assistance if needed.
-              </li>
-            </ul>
+        <div class="row g-4 justify-content-center">
+          <!-- Step cards 1–6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3 d-flex flex-row">
+              <div class="icon-box me-3"><i data-lucide="check-circle"></i></div>
+              <div>
+                <div class="d-flex align-items-center mb-2"><span class="step-number me-2">1</span><h5 class="mb-0">Ensure Safety First</h5></div>
+                <p class="text-muted">Protect yourself and your devices before taking action.</p>
+                <ul>
+                  <li>Disconnect from the internet if necessary</li>
+                  <li>Avoid interacting further with suspicious messages or links</li>
+                  <li>Do not share personal or financial details</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Where to Report -->
-    <section class="report-contacts text-center">
-      <h4 class="fw-bold mb-4">📞 Where to Report</h4>
-
-      <div class="row g-4">
-        <!-- 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="report-card card h-100 p-4 shadow-sm">
-            <h5>🚓 Philippine National Police – Anti-Cybercrime Group (PNP-ACG)</h5>
-            <p>Email: <a href="mailto:acg@pnp.gov.ph">acg@pnp.gov.ph</a></p>
-            <p>Hotline: (02) 8414-1560</p>
-            <p>Facebook: <a href="https://facebook.com/PNPACG" target="_blank">facebook.com/PNPACG</a></p>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3 d-flex flex-row">
+              <div class="icon-box me-3"><i data-lucide="file-text"></i></div>
+              <div>
+                <div class="d-flex align-items-center mb-2"><span class="step-number me-2">2</span><h5 class="mb-0">Gather Information</h5></div>
+                <p class="text-muted">Document details of the incident as accurately as possible.</p>
+                <ul>
+                  <li>Date, time, and platform where it occurred</li>
+                  <li>Screenshots of messages, emails, or pop-ups</li>
+                  <li>Sender’s address, username, or website links</li>
+                  <li>Any suspicious attachments or downloads</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="report-card card h-100 p-4 shadow-sm">
-            <h5>💻 National Computer Emergency Response Team (NCERT)</h5>
-            <p>Email: <a href="mailto:report@dict.gov.ph">report@dict.gov.ph</a></p>
-            <p>Website: <a href="https://ncert.gov.ph" target="_blank">ncert.gov.ph</a></p>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3 d-flex flex-row">
+              <div class="icon-box me-3"><i data-lucide="camera"></i></div>
+              <div>
+                <div class="d-flex align-items-center mb-2"><span class="step-number me-2">3</span><h5 class="mb-0">Preserve Evidence</h5></div>
+                <p class="text-muted">Secure all possible evidence for investigation.</p>
+                <ul>
+                  <li>Save emails, chat logs, and transaction records</li>
+                  <li>Keep screenshots in a safe folder</li>
+                  <li>Do not delete files or messages until reported</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="report-card card h-100 p-4 shadow-sm">
-            <h5>🛡️ National Privacy Commission (NPC)</h5>
-            <p>Email: <a href="mailto:complaints@privacy.gov.ph">complaints@privacy.gov.ph</a></p>
-            <p>Website: <a href="https://privacy.gov.ph" target="_blank">privacy.gov.ph</a></p>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3 d-flex flex-row">
+              <div class="icon-box me-3"><i data-lucide="phone"></i></div>
+              <div>
+                <div class="d-flex align-items-center mb-2"><span class="step-number me-2">4</span><h5 class="mb-0">Report to Authorities</h5></div>
+                <p class="text-muted">Notify the proper agencies or organizations.</p>
+                <ul>
+                  <li>Local police (if financial loss or threats are involved)</li>
+                  <li>National cybercrime reporting center</li>
+                  <li>Your school, workplace, or organization’s IT/security team</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- 4 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="report-card card h-100 p-4 shadow-sm">
-            <h5>📱 Cybercrime Investigation and Coordinating Center (CICC)</h5>
-            <p>Email: <a href="mailto:report@cicc.gov.ph">report@cicc.gov.ph</a></p>
-            <p>Website: <a href="https://cicc.gov.ph" target="_blank">cicc.gov.ph</a></p>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3 d-flex flex-row">
+              <div class="icon-box me-3"><i data-lucide="users"></i></div>
+              <div>
+                <div class="d-flex align-items-center mb-2"><span class="step-number me-2">5</span><h5 class="mb-0">Notify Service Providers</h5></div>
+                <p class="text-muted">Alert the platforms or companies involved.</p>
+                <ul>
+                  <li>Report phishing or hacking attempts to email providers</li>
+                  <li>Inform your bank of suspicious financial activity</li>
+                  <li>Use in-app reporting tools on social media</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- 5 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="report-card card h-100 p-4 shadow-sm">
-            <h5>📞 National Telecommunications Commission (NTC)</h5>
-            <p>Hotline: (02) 8924-4010</p>
-            <p>Website: <a href="https://ntc.gov.ph" target="_blank">ntc.gov.ph</a></p>
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3 d-flex flex-row">
+              <div class="icon-box me-3"><i data-lucide="clock"></i></div>
+              <div>
+                <div class="d-flex align-items-center mb-2"><span class="step-number me-2">6</span><h5 class="mb-0">Follow Up & Stay Informed</h5></div>
+                <p class="text-muted">Track your report and take preventive measures.</p>
+                <ul>
+                  <li>Get a reference or case number for follow-up</li>
+                  <li>Monitor your accounts for unusual activity</li>
+                  <li>Learn from the incident and strengthen your online security</li>
+                </ul>
+              </div>
+            </div>
           </div>
-        </div>
 
-        <!-- 6 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="report-card card h-100 p-4 shadow-sm">
-            <h5>👩‍⚖️ Department of Justice (DOJ) - Office of Cybercrime</h5>
-            <p>Email: <a href="mailto:report@doj.gov.ph">report@doj.gov.ph</a></p>
-            <p>Website: <a href="https://doj.gov.ph" target="_blank">doj.gov.ph</a></p>
-          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Incident Types Section -->
+      <section class="incident-section text-center mt-5">
+        <h2 class="mb-3">Types of Incidents & Who to Contact</h2>
+        <p class="text-muted mb-5 mx-auto" style="max-width: 700px;">
+          Different incidents require different response teams. Find the right contact for your situation below.
+        </p>
+
+        <div class="row g-4 justify-content-center">
+          <!-- INCIDENT CARDS 1–6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="icon red mb-3"><i data-lucide="shield"></i></div>
+              <h5>Online Scams & Fraud</h5>
+              <p class="text-muted">Phishing, investment scams, identity theft</p>
+              <div class="contacts">
+                <div class="d-flex justify-content-between mb-1"><span>PNP Anti-Cybercrime Group (ACG):</span><span class="contact emergency">0998-598-8116</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>NBI Cybercrime Division:</span><span class="contact phone">(02) 8523-8231</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>Consumer Protection, BSP/DTI:</span><span class="contact phone">1-384</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="icon red mb-3"><i data-lucide="shield"></i></div>
+              <h5>Online Scams & Fraud</h5>
+              <p class="text-muted">Phishing, investment scams, identity theft</p>
+              <div class="contacts">
+                <div class="d-flex justify-content-between mb-1"><span>PNP Anti-Cybercrime Group (ACG):</span><span class="contact emergency">0998-598-8116</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>NBI Cybercrime Division:</span><span class="contact phone">(02) 8523-8231</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>Consumer Protection, BSP/DTI:</span><span class="contact phone">1-384</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="icon red mb-3"><i data-lucide="shield"></i></div>
+              <h5>Online Scams & Fraud</h5>
+              <p class="text-muted">Phishing, investment scams, identity theft</p>
+              <div class="contacts">
+                <div class="d-flex justify-content-between mb-1"><span>PNP Anti-Cybercrime Group (ACG):</span><span class="contact emergency">0998-598-8116</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>NBI Cybercrime Division:</span><span class="contact phone">(02) 8523-8231</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>Consumer Protection, BSP/DTI:</span><span class="contact phone">1-384</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="icon red mb-3"><i data-lucide="shield"></i></div>
+              <h5>Online Scams & Fraud</h5>
+              <p class="text-muted">Phishing, investment scams, identity theft</p>
+              <div class="contacts">
+                <div class="d-flex justify-content-between mb-1"><span>PNP Anti-Cybercrime Group (ACG):</span><span class="contact emergency">0998-598-8116</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>NBI Cybercrime Division:</span><span class="contact phone">(02) 8523-8231</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>Consumer Protection, BSP/DTI:</span><span class="contact phone">1-384</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="icon red mb-3"><i data-lucide="shield"></i></div>
+              <h5>Online Scams & Fraud</h5>
+              <p class="text-muted">Phishing, investment scams, identity theft</p>
+              <div class="contacts">
+                <div class="d-flex justify-content-between mb-1"><span>PNP Anti-Cybercrime Group (ACG):</span><span class="contact emergency">0998-598-8116</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>NBI Cybercrime Division:</span><span class="contact phone">(02) 8523-8231</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>Consumer Protection, BSP/DTI:</span><span class="contact phone">1-384</span></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm p-3">
+              <div class="icon red mb-3"><i data-lucide="shield"></i></div>
+              <h5>Online Scams & Fraud</h5>
+              <p class="text-muted">Phishing, investment scams, identity theft</p>
+              <div class="contacts">
+                <div class="d-flex justify-content-between mb-1"><span>PNP Anti-Cybercrime Group (ACG):</span><span class="contact emergency">0998-598-8116</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>NBI Cybercrime Division:</span><span class="contact phone">(02) 8523-8231</span></div>
+                <div class="d-flex justify-content-between mb-1"><span>Consumer Protection, BSP/DTI:</span><span class="contact phone">1-384</span></div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Rest of the incident cards (Cyberbullying, Data Privacy, etc.) should be added similarly with full contact details from your original HTML -->
+        </div>
+      </section>
+
+    </div>
   </main>
 
-  <!-- ===================================================
-       FOOTER (Dynamically loaded from footer.html)
-       =================================================== -->
+  <!-- FOOTER -->
   <div id="footer"></div>
 
-  <!-- Bootstrap JS -->
+  <!-- JS SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- ===================================================
-       DYNAMIC HEADER & FOOTER LOADER + ACTIVE LINK
-       =================================================== -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // ✅ Load Header
-      fetch("header.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("header").innerHTML = data;
+    // Load header
+    fetch("header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
 
-          // ✅ Highlight active link
-          const currentPage = "reportanincident.html";
-          const navLinks = document.querySelectorAll(".nav-link");
-          navLinks.forEach(link => {
-            const href = link.getAttribute("href");
-            if (href && href.includes(currentPage)) {
-              link.classList.add("active");
-            } else {
-              link.classList.remove("active");
-            }
-          });
-        })
-        .catch(err => console.error("Header load error:", err));
+        const currentPage = "reportanincident.html";
+        document.querySelectorAll(".nav-link").forEach(link => {
+          link.classList.toggle("active", link.getAttribute("href")?.includes(currentPage));
+        });
+      });
 
-      // ✅ Load Footer
-      fetch("footer.html")
-        .then(res => res.text())
-        .then(data => (document.getElementById("footer").innerHTML = data))
-        .catch(err => console.error("Footer load error:", err));
-    });
+    // Load footer
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("footer").innerHTML = data)
+      .catch(err => console.error("Footer load error:", err));
+
+    // Activate Lucide icons
+    lucide.createIcons();
   </script>
 </body>
 </html>

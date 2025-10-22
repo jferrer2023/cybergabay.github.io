@@ -27,17 +27,15 @@
   <!-- ===================================================
        MAIN CONTENT
        =================================================== -->
-  <main class="content text-center mt-5 pt-5">
-    <div class="container mt-5 pt-5">
-      <h2>Welcome to CyberGabay</h2>
+  <main class="content mt-5 pt-7">
+   <div class="container text-end right-content" style="margin-top: 50px;">
+      <h2>WELCOME TO CYBERGABAY</h2>
       <p>
         Your trusted guide to building a smarter and safer digital life.
         <br>
         We are network and cybersecurity students dedicated to spreading awareness about online safety.
         This website was created for educational purposes — to help you understand digital threats, learn best practices, and explore tools that make the internet a safer place for everyone.
       </p>
-
-      <img src="../images/image2.png" alt="CyberGabay Logo" class="bottom-logo mt-4" style="width: 370px; height: auto;">
     </div>
   </main>
 
@@ -54,23 +52,21 @@
   <!-- ===================================================
        DYNAMIC HEADER & FOOTER LOADER
        =================================================== -->
-<script>
-  // Load header and footer dynamically
-  Promise.all([
-    fetch("header.html").then(res => res.text()),
-    fetch("footer.html").then(res => res.text())
-  ]).then(([headerData, footerData]) => {
-    document.getElementById("header").innerHTML = headerData;
-    document.getElementById("footer").innerHTML = footerData;
+  <script>
+    Promise.all([
+      fetch("header.html").then(res => res.text()),
+      fetch("footer.html").then(res => res.text())
+    ]).then(([headerData, footerData]) => {
+      document.getElementById("header").innerHTML = headerData;
+      document.getElementById("footer").innerHTML = footerData;
 
-    // ✅ Highlight the active page link automatically
-    const currentPage = window.location.pathname.split("/").pop();
-    document.querySelectorAll(".nav-link").forEach(link => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
+      const currentPage = window.location.pathname.split("/").pop();
+      document.querySelectorAll(".nav-link").forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
     });
-  });
-</script>
+  </script>
 </body>
 </html>
