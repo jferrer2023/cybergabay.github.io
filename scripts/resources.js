@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const carouselElement = document.querySelector("#resourceCarousel");
   if (carouselElement) {
     const carousel = new bootstrap.Carousel(carouselElement, {
-      interval: 2000, // 2 seconds per slide
+      interval: 3000, // 3 seconds per slide
       ride: 'carousel', // auto-start
       pause: false     // won't pause on hover
     });
