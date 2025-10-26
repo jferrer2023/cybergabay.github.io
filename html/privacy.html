@@ -5,58 +5,120 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy</title>
   <style>
-    /* Popup modal background */
-    #privacyModal {
-      display: none; /* Hidden by default */
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.5);
-      justify-content: center;
-      align-items: center;
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
     }
-
-    /* Modal content box */
-    .privacy-content {
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      position: relative;
-      text-align: left;
-    }
-
-    /* Close button */
-    #closePrivacy {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 24px;
+    button {
+      background-color: #000000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
       cursor: pointer;
+      margin-bottom: 20px;
+    }
+    button:hover {
+      background-color: #565454;
     }
   </style>
 </head>
 <body>
 
-  <!-- Button to open the popup -->
-  <button id="privacyBtn">Privacy Policy</button>
+  <button id="privacyBtn">Back</button>
 
-  <!-- Popup modal -->
-  <div id="privacyModal">
-    <div class="privacy-content">
-      <span id="closePrivacy">&times;</span>
-      <h2>Privacy Policy</h2>
-      <p>Your privacy content goes here. Include any disclaimers or information you want users to see.</p>
-    </div>
+    <h1>Privacy Policy</h1>
+    <p>
+      At <strong>CyberGabay</strong>, your privacy matters. This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website and interact with our services.
+    </p>
+
+    <h2>1. Information We Collect</h2>
+    <ul>
+      <li><strong>Personal Information:</strong> such as your name, email address, or any details you voluntarily provide.</li>
+      <li><strong>Usage Data:</strong> including pages visited, browser type, and other analytics data.</li>
+      <li><strong>Cookies:</strong> small text files that help us improve your browsing experience.</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <ul>
+      <li>To improve site performance and cybersecurity awareness content.</li>
+      <li>To respond to user feedback or inquiries.</li>
+      <li>To send newsletters and updates (if subscribed).</li>
+    </ul>
+
+    <h2>3. Data Security</h2>
+    <p>
+      We use appropriate technical and administrative measures to safeguard your information. However, no system is entirely secure, and we encourage users to stay vigilant online.
+    </p>
+
+    <h2>4. Third-Party Links</h2>
+    <p>
+      Our website may contain links to other sites. We are not responsible for the content or privacy policies of external websites.
+    </p>
+
+    <h2>5. Your Rights</h2>
+    <p>
+      You can request access to, correction, or deletion of your personal data by contacting us at <strong>support@cybergabay.com.ph</strong>.
+    </p>
+
+    <hr>
+
+    <h1>Terms of Service</h1>
+    <p>
+      These Terms of Service (“Terms”) govern your use of the <strong>CyberGabay</strong> website and its content. 
+      By accessing or using our site, you agree to these Terms.
+    </p>
+
+    <h2>1. Use of the Website</h2>
+    <p>
+      You agree to use this website for lawful purposes only. You may not use it in a way that could damage, disable, or impair its functionality or interfere with others’ use.
+    </p>
+
+    <h2>2. Intellectual Property</h2>
+    <p>
+      All content on CyberGabay — including text, graphics, logos, and images — is the property of CyberGabay unless otherwise stated. 
+      You may not copy or redistribute content without permission.
+    </p>
+
+    <h2>3. Disclaimer</h2>
+    <p>
+      CyberGabay provides information for educational and awareness purposes only. 
+      We do not guarantee that all content is complete, up to date, or error-free. 
+      Users should exercise judgment and verify facts before acting on information found here.
+    </p>
+
+    <h2>4. Limitation of Liability</h2>
+    <p>
+      CyberGabay shall not be held liable for any damages resulting from the use or inability to use the website, including any loss of data, profits, or security breaches.
+    </p>
+
+    <h2>5. Changes to These Terms</h2>
+    <p>
+      We may update these Terms periodically. Continued use of the site after any changes constitutes acceptance of the new Terms.
+    </p>
+
+    <h2>6. Contact Us</h2>
+    <p>
+      For questions or concerns about our Privacy Policy or Terms of Service, you may contact us at:<br>
+      📧 <strong>support@cybergabay.com.ph</strong><br>
+  
+
+    <p><em>Last Updated: October 2025</em></p>
   </div>
 
-  <!-- JS -->
-  <script src="privacy.js"></script>
+ 
+
+
+
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.getElementById("privacyBtn").addEventListener("click", function() {
+        window.location.href = "home.html"; // ✅ Go back to home.html
+      });
+    });
+  </script>
 
 </body>
 </html>
