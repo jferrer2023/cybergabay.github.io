@@ -1,9 +1,11 @@
 CyberGabay Website Link:
 # https://jferrer2023.github.io/cybergabay.github.io
 
+## 🧑‍💻 Authors
+Developed by **Network and Cybersecurity students - S3101 Joyce Ferrer and Ryu Ken Lindo** as part of an academic initiative to promote online safety and awareness.  
+
 # 🛡️ CyberGabay  
 **Your trusted guide to building a smarter and safer digital life.**
-
 We are **Network and Cybersecurity students** dedicated to spreading awareness about online safety.  
 CyberGabay was created for **educational purposes** — to help users understand digital threats, learn best practices, and explore tools that make the internet a safer place for everyone.
 
@@ -84,6 +86,5 @@ CyberGabay’s impact will be measured by:
 - **Deployment:** GitHub Pages  
 
 
-## 🧑‍💻 Authors
-Developed by **Network and Cybersecurity students - Joyce Ferrer and Ryu Ken Lindo** as part of an academic initiative to promote online safety and awareness.  
+
 
