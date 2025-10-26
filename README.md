@@ -50,7 +50,7 @@ CyberGabay’s impact will be measured by:
 
 ---
 
-## ⚙️ MVP Inventory and Flow
+## ⚙️ Inventory and Flow
 
 ### 🌐 Website Pages & Features
 | Page | Description |
