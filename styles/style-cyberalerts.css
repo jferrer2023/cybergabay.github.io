@@ -154,7 +154,9 @@ body {
   transform: translateY(-4px);
 }
 
-/* ===================================================
-   FOOTER & HEADER ARE INHERITED FROM HOME.CSS
-   =================================================== */
-/* No footer/header styles here — fully inherited */
+/* Style only the hero banner heading */
+.hero-banner .overlay h2 {
+  color: #21d596; /* pick your unique color */
+  font-weight: 700;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6); /* optional contrast */
+}

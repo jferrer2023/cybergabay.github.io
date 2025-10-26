@@ -57,6 +57,11 @@ main.content {
 /* ===================================================
    NAVBAR
    =================================================== */
+
+.navbar {
+  background-color: #565454 !important; /* change this color as you like */
+}
+
 .navbar, .navbar-nav {
   margin: 0 !important;
   padding: 0 !important;
@@ -79,7 +84,7 @@ main.content {
   align-items: center;
   justify-content: center;
   margin: 0 !important;
-  border-right: 1px solid #222;
+  
 }
 
 .navbar-nav .nav-item:last-child .nav-link {
@@ -198,3 +203,4 @@ body.fade-page {
 body.fade-page.fade-in {
   opacity: 1;
 }
+
