@@ -1,7 +1,7 @@
 CyberGabay Website Link:
 # https://jferrer2023.github.io/cybergabay.github.io
 
-TA Test Document and Demo:
+TA Test Document, Demo and Project Plan:
 # https://drive.google.com/drive/folders/1GINFRuKlWuBYBSa6bDGVzAjSu4DaYNDT
 
 ## 🧑‍💻 Authors
